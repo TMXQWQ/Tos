@@ -35,6 +35,9 @@ long get_SIG(SIG* data);
 */
 
 PID get_pid();
+/*
+    成功返回自己的PID，否则返回错误码
+*/
 
 
 #endif
