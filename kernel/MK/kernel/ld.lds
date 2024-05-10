@@ -4,6 +4,13 @@ ENTRY(__start)
 
 SECTIONS
 {
-    
+.text:
+{
+	_text=.;
+	*(.text)
+	_etext=.;
+}
+
+
 }
 
