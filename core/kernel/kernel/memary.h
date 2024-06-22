@@ -15,5 +15,14 @@ typedef struct{
 	void*	(*free)(mm,mnode);
 }mm;
 
+void kmm_init(mm);
+
+
+mnode* kmm_create(mm,size_t,void*);
+
+
+void* free(mm,mnode);
+
+
 
 

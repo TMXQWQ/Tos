@@ -10,7 +10,7 @@ mnode kmm_create(mm m,size_t size,void* adr){
 	if((mm.head)->enable!=200){
 		ret.last=null;
 		ret.adr=adr;
-		ret.end=adr+size;
+		ret.end=adr+size-1;
 		ret.enable=0;
 		ret.next=null;
 		return ret;
@@ -18,7 +18,7 @@ mnode kmm_create(mm m,size_t size,void* adr){
 		for(int i=0;i<128;i++){
 			if(((mm.head)+i)->enable!=200 && ((mm.head)+i)-next)==null{
 				ret.adr=adr;
-				ret.end=adr+size;
+				ret.end=adr+size-1;
 				ret.last=(mm.head)+i;
 				ret.next=null;
 				ret.enable=200;
