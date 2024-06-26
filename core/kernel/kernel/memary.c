@@ -1,4 +1,4 @@
-#include <inc.h>
+#include "inc.h"
 
 void kmm_init(mm m){
 	m->create=&kmm_create;
@@ -27,6 +27,7 @@ mnode kmm_create(mm m,size_t size,void* adr){
 		}
 	}
 	return (mnode)-1;
+}
 
 
 
