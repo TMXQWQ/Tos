@@ -3,22 +3,18 @@
 
 #include "inc.h"
 
-
-
 typedef struct{
-    char* name[256] ;
-    size_t size     ;        //byte
-    int protect     ;        //类似于Unix的保护属性
-    uid own         ;
-} File;
+    long rootfs_addr;
+    size_t size;
+} super_block;
 
-typedef struct {
-    File (*open)()      ;
-    int (*close)()      ;
-    size_t (*seed)()    ;
-    File (*link)()      ;
-    File (*unlink)()    ;
-}fs_op;
+void vfs_init();
+
+typedef struct File;
+
+typedef struct fs_op;
+
+typedef struct fs;
 
 
 
