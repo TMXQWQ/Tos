@@ -3,6 +3,8 @@
 
 #include "inc.h"
 
+void* rootfs_ram_addr;
+
 typedef struct{
     long rootfs_addr;
     size_t size;
