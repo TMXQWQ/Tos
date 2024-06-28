@@ -3,7 +3,7 @@
 
 #include "inc.h"
 
-void* rootfs_ram_addr;
+#define rootfs_ram_addr 0x114514        //可以自定义，要求  <addr<  
 
 typedef struct{
     long rootfs_addr;
