@@ -8,7 +8,9 @@ int VFS_main(){
     return 0;
 }
 
-int vfs_init();
+int vfs_init(){
+    mem_copy(_boot_img, rootfs_addr);
+}
 
 int vfs_file2fs(const char* path){
     
